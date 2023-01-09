@@ -5,6 +5,24 @@
 * License: https://bootstrapmade.com/license/
 */
 
+
+
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+window.addEventListener('scroll', function() {
+  var navbar = document.getElementById('bar');
+  var nav = document.querySelector('.nav');
+  if (window.scrollY > 10) {
+    navbar.classList.add('scrolled');
+    nav.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+    nav.classList.remove('scrolled');
+  }
+});
+
+
+
+
 let menu = document.querySelector (".menu-icon");
 let navbar = document.querySelector (".navbar");
 
