@@ -1981,7 +1981,7 @@ li{
 }
 
 .text-p:hover{
-  color: rgb(240, 39, 240);
+  color: rgb(255, 153, 255);
 }
 
 @media screen and (max-width: 768px) {
