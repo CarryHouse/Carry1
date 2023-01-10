@@ -2064,3 +2064,55 @@ li{
   }
 }
 
+.img-containerx img {
+  height: 200px;
+  width: 60%;
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  .img-containerx img {
+    height: 100px;
+    width: 150px;
+  }
+}
+
+/* Tablet and desktop styles */
+@media (min-width: 481px) {
+  .img-containerx img {
+    height: 200px;
+    width: 300px;
+  }
+}
+
+#about .sliderorder-1 .swiper-wrapper {
+  width: 50%;
+  margin: auto;
+}
+
+
+.image-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-container img {
+  width: 80%; /* adjust width to 60% */
+  max-height: 400px;
+  margin: 0 auto;
+}
+
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .image-container img {
+      max-height: 100%; /* Change max-height to 100% on mobile devices */
+  }
+}
+
+
+
+
+
