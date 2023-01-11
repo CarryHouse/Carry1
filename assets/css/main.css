@@ -418,7 +418,12 @@ section {
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: rgb(240, 75, 240);
+      color: #fd2058;
+      text-shadow:0px 0px 30px #fd0015;
+      -moz-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      -webkit-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
   }
 
   .navbar .dropdown ul {
@@ -770,7 +775,7 @@ section {
 # Why Us Section
 --------------------------------------------------------------*/
 .why-us .why-box {
-  padding: 30px;
+  padding: 10px 20px 30px 40px;
   background: var(--color-primary);
   color: #fff;
 }
@@ -2184,22 +2189,24 @@ li {
 .card {
   position: relative; /* set the position to relative */
   width: 300px;
-  height: 200px;
+  height: 400px;
   margin: 30px;
   box-shadow: 0px 0px 10px #ddd;
-  border-radius: 10px;
+  border-radius: 8px;
   /* Add transition for hover effect */
-  transition: transform .3s ease-in-out;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* other transition values*/
+  transform: translate(0); /* sets the initial position of the card */
   transform-style: preserve-3d;
   overflow: hidden;
 }
 /* On hover, add a orange glow and also make the card slightly larger */
 .card:hover {
-  box-shadow: 0 0 10px orange;
-  transform: scale(1.1);
+  /* box-shadow: 0 0 10px orange; */
+  transform: translate(-10px, -10px); /* specifies the new position of the card when hovered over */
 }
 
 .card-container {
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2217,5 +2224,65 @@ li {
   padding: 20px; /* add padding as needed */
   box-sizing: border-box; /* include the padding in the total dimensions */
 }
+
+.card h4 {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 0 30px 0;
+  font-family: var(--font-secondary);
+}
+
+.card p {
+  font-size: 15px;
+  color: #6c757d;
+}
+
+.card i {
+  color: var(--color-primary);
+  margin-bottom: 30px;
+  font-size: 32px;
+  margin-bottom: 30px;
+  background: rgba(206, 18, 18, 0.1);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+}
+.card-content{
+  display: grid;
+  place-items: center;
+}
+
+.card i:hover::before {
+  transform: scale(1.1);
+}
+
+.card i:hover {
+  color: #fdd807;
+  text-shadow: 0 0 5px #030003;
+}
+
+.card {
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes zoomIn {
+  from {
+      transform: scale(1);
+  }
+  to {
+      transform: scale(1.1);
+  }
+}
+
+.card:hover {
+  animation-name: zoomIn;
+}
+
+
 
 
