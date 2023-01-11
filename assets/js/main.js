@@ -5,22 +5,6 @@
  * License: https://bootstrapmade.com/license/
  */
 
-// Hover Card
-// const cards = document.querySelectorAll('.card');
-// cards.forEach(card => {
-//     card.addEventListener("mouseover", function() {
-//         card.classList.add("animated");
-//         card.classList.add("card");
-//     });
-//     card.addEventListener("mouseout", function() {
-//         card.classList.remove("animated");
-//         card.classList.remove("card");
-//     });
-// });
-
-
-
-
 // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
 window.addEventListener("scroll", function () {
   var navbar = document.getElementById("bar");
