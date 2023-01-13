@@ -22,6 +22,7 @@
 
 /* Colors */
 :root {
+  --main-color: #647bff;
   --color-default: #212529;
   --color-primary: #ce1212;
   --color-secondary: #37373f;
@@ -1284,7 +1285,7 @@ section {
 .book-a-table .php-email-form .error-message {
   display: none;
   color: #fff;
-  background: #df1529;
+  background: #df15d5;
   text-align: left;
   padding: 15px;
   margin-bottom: 24px;
@@ -1347,13 +1348,13 @@ section {
   background: var(--color-primary);
   border: 0;
   padding: 14px 60px;
-  color: #fff;
+  color: rgb(14, 13, 13);
   transition: 0.4s;
   border-radius: 50px;
 }
 
 .book-a-table .php-email-form button[type=submit]:hover {
-  background: #ec2727;
+  background: #f703ad;
 }
 
 @-webkit-keyframes animate-loading {
@@ -1457,7 +1458,6 @@ section {
 .contact .info-item .social-links a {
   font-size: 24px;
   display: inline-block;
-  color: rgba(55, 55, 63, 0.7);
   line-height: 1;
   margin: 4px 6px 0 0;
   transition: 0.3s;
@@ -1467,11 +1467,13 @@ section {
   color: var(--color-primary);
 }
 
+/* XXXXXX */
 .contact .php-email-form {
   width: 100%;
   margin-top: 30px;
   background: #fff;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 20px rgba(2, 0, 2, 0.8);
+  border-radius: 15px;
 }
 
 .contact .php-email-form .form-group {
@@ -1541,16 +1543,18 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: var(--color-primary);
+  background-color: rgb(214, 6, 6);
   border: 0;
   padding: 12px 40px;
-  color: #fff;
+  color: rgb(250, 249, 250);
   transition: 0.4s;
   border-radius: 50px;
+  font-weight: bolder;
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #ec2727;
+  color: white;
+  background: #f83d3d;
 }
 
 @keyframes animate-loading {
@@ -1651,23 +1655,33 @@ section {
 --------------------------------------------------------------*/
 .footer {
   font-size: 14px;
-  background-color: #1f1f24;
+  font-weight: bold;
+  background-color: #f8c7fa;
   padding: 50px 0;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(19, 18, 18, 0.7);
 }
 
+/* .footer .container{
+  
+} */
+
 .footer .icon {
+  -ms-text-combine-horizontal: var(--color-primary);
   margin-right: 15px;
   font-size: 24px;
   line-height: 0;
 }
 
+.footer .bi{
+  color: var(--color-primary);
+}
+
 .footer h4 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   position: relative;
   padding-bottom: 5px;
-  color: #fff;
+  color: #000;
 }
 
 .footer .footer-links {
@@ -1691,33 +1705,33 @@ section {
 }
 
 .footer .footer-links ul a {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(29, 28, 28, 0.6);
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
 }
 
 .footer .footer-links ul a:hover {
-  color: #fff;
+  color: rgb(12, 12, 12);
 }
 
 .footer .social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  /* border: 1px solid rgba(255, 255, 255, 0.2); */
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.7);
+  /* color: rgba(255, 255, 255, 0.7); */
   margin-right: 10px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
   color: #fff;
-  border-color: #fff;
+  border-color: rgb(19, 18, 18);
 }
 
 .footer .copyright {
@@ -2170,7 +2184,7 @@ li {
 }
 
 .about-p {
-  font-family: Asap, sans-serif;
+  font-family: var(--font-secondary);
   color: #252222;
   font-size: 18px;
   line-height: 1.3;
@@ -2188,21 +2202,26 @@ li {
 /* Floating cards */
 .card {
   position: relative; /* set the position to relative */
-  width: 300px;
+  width: 320px;
   height: 400px;
   margin: 30px;
-  box-shadow: 0px 0px 10px #ddd;
+  background: #f4f4f4;
+  font-weight: 500;
+  /* box-shadow: 0px 0px 10px #ddd; */
   border: none !important;
   /* Add transition for hover effect */
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* other transition values*/
-  transform: translate(0); /* sets the initial position of the card */
+  transform: translate(-50%, -50%); /* sets the initial position of the card */
   transform-style: preserve-3d;
   overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 3px 20px rgba(2, 0, 2, 0.8);
+  border-radius: 15px;
 }
 /* On hover, add a orange glow and also make the card slightly larger */
 .card:hover {
   /* box-shadow: 0 0 10px orange; */
-  transform: translate(-10px, -10px); /* specifies the new position of the card when hovered over */
+  transform: translate(-15px, -15px); /* specifies the new position of the card when hovered over */
 }
 
 .card-container {
@@ -2227,14 +2246,14 @@ li {
 
 .card h4 {
   font-size: 20px;
-  font-weight: 400;
+  font-weight: bolder;
   margin: 0 0 30px 0;
   font-family: var(--font-secondary);
 }
 
 .card p {
   font-size: 15px;
-  color: #6c757d;
+  color: #1f1e1f;
 }
 
 .card i {
@@ -2260,7 +2279,7 @@ li {
 }
 
 .card i:hover {
-  color: #fdd807;
+  color: #f5f24b;
   text-shadow: 0 0 5px #030003;
 }
 
@@ -2270,7 +2289,7 @@ li {
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3); */
   transition: all 0.3s ease-in-out;
 }
 
@@ -2283,12 +2302,92 @@ li {
   }
 }
 
-.card:hover, .card i:hover {
+.card:hover:hover {
   animation-name: zoomIn;
-  box-shadow: 0px 0px 10px rgba(255, 255, 0, 0.4);
+  /* box-shadow: 0px 15px 30px rgba(254, 255, 172, 0.432); */
+}
+
+.about{
+  background: linear-gradient(to bottom, rgb(247, 209, 240),  #fdfcfa);
+}
+
+
+.home-text h2{
+  font-size: 3.5rem;
+  line-height: 4.8rem;
+}
+
+.home-text .color{
+  color: var(--main-color);
 }
 
 
 
 
+
+.social-links a{
+  border: 2px solid #f0622a;
+}
+
+.social-links a i{
+  font-size: 25px;
+  transition: all 0.5s;
+}
+
+.social-links a:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #181817;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.social-links a:hover:before{
+  opacity: 1;
+  transform: scale(0.8);
+}
+
+.social-links a:hover{
+  cursor: pointer
+}
+
+.social-links a:hover i{
+  color: #030003;
+}
+
+.social-links a:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.5s;
+  opacity: 0;
+  border: 5px dashed #030003;
+  box-sizing: border-box;
+}
+
+@keyframes rotate {
+  0% {
+    transform: scale(0.92) rotate(0deg)
+  }
+  100% {
+    transform: scale(0.92) rotate(360deg)
+  }
+}
+
+.social-links a i:hover:after{
+  opacity: 1;
+  animation: rotate 10s linear infinite;
+}
 
